@@ -1,0 +1,4 @@
+entry: Init_Locationmanager_extension	
+javaentry: com.locationmanager.Locationmanager
+android_additional_sources_list: ext/locationmanager/platform/android/ext_build.files
+libraries: ["Locationmanager"]
