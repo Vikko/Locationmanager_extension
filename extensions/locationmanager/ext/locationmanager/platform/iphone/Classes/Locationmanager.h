@@ -9,7 +9,7 @@
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
-- (void)start;
+- (id)init;
 - (void)dealloc;
 
 @end

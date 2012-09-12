@@ -12,47 +12,42 @@ locationController *lc;
 
 @synthesize locationManager;
 
-- (void)start {
+- (id)init {
+	if (self = [super init]) {
+		self.locationManager = [[CLLocationManager alloc] init];
 	
-	[[super alloc] init];
-	self.locationManager = [[CLLocationManager alloc] init];
+		NSLog(@"%@", [CLLocationManager headingAvailable]? @"\n\nHeading available!\n" : @"\n\nNo heading..\n");
+		NSLog(@"%@", [CLLocationManager locationServicesEnabled]? @"\n\nLocation available!\n" : @"\n\nNo location..\n");
 	
-	NSLog(@"%@", [CLLocationManager headingAvailable]? @"\n\nHeading available!\n" : @"\n\nNo heading..\n");
-	NSLog(@"%@", [CLLocationManager locationServicesEnabled]? @"\n\nLocation available!\n" : @"\n\nNo location..\n");
-	
-	// check if the hardware has a compass
-  	if ([CLLocationManager headingAvailable] == NO) {
-	    // No compass is available. This application cannot function without a compass, 
-	    // so a dialog will be displayed and no magnetic data will be measured.
-	    locationManager = nil;
-	    UIAlertView *noCompassAlert = [[UIAlertView alloc] initWithTitle:@"No Compass!" message:@"This device does not have the ability to measure magnetic fields." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	    [noCompassAlert show];
-	    [noCompassAlert release];
-		NSLog(@"\n***** ERROR *****\n No compass found !!!");
-	} else {
-	    // setup delegate callbacks
-	    locationManager.delegate = self;
+		// check if the hardware has a compass
+	  	if ([CLLocationManager headingAvailable] == NO) {
+		    // No compass is available. This application cannot function without a compass, 
+		    // so a dialog will be displayed and no magnetic data will be measured.
+		    locationManager = nil;
+		    UIAlertView *noCompassAlert = [[UIAlertView alloc] initWithTitle:@"No Compass!" message:@"This device does not have the ability to measure magnetic fields." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+		    [noCompassAlert show];
+		    [noCompassAlert release];
+			NSLog(@"\n***** ERROR *****\n No compass found !!!");
+		} else {
+		    // setup delegate callbacks
+		    locationManager.delegate = self;
 
-	    // heading service configuration
-	    locationManager.headingFilter = kCLHeadingFilterNone;
+		    // heading service configuration
+		    locationManager.headingFilter = kCLHeadingFilterNone;
       
-		// location service configuration
-		locationManager.distanceFilter = kCLDistanceFilterNone;
-	 	locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+			// location service configuration
+			locationManager.distanceFilter = kCLDistanceFilterNone;
+		 	locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
 
-		//start location services
-	 	[locationManager startUpdatingLocation];
+			//start location services
+		 	[locationManager startUpdatingLocation];
 	
-    	// start the compass
-    	[locationManager startUpdatingHeading];
+	    	// start the compass
+	    	[locationManager startUpdatingHeading];
 
-		// int i = 0;
-		// while(i <= 30){
-		// 	[NSThread sleepForTimeInterval:1];
-		// 	NSLog(@"background thread for %d seconds", i);
-		// 	i++;
-		// }
-    }
+	    }
+	return self;
+	}
 }
 
 - (void)dealloc {    
@@ -92,10 +87,9 @@ void locationmanager_init(void) {
    	if(!started) {
        	// Initialize the Objective C accelerometer class.
        	lc = [[locationController alloc] init];
-		[lc performSelectorInBackground:@selector(start) withObject:nil];
       	started = true;
    	}
-	[pool release]
+	[pool release];
 }
 
 void locationmanager_get_heading(double *x, double *y, double *z, double *th) {
