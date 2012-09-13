@@ -46,8 +46,8 @@ locationController *lc;
 	    	[locationManager startUpdatingHeading];
 
 	    }
-	return self;
 	}
+	return self;
 }
 
 - (void)dealloc {    
@@ -86,7 +86,7 @@ void locationmanager_init(void) {
    	static bool started = false;
    	if(!started) {
        	// Initialize the Objective C accelerometer class.
-       	lc = [[locationController alloc] init];
+       	lc = [[[locationController alloc] init] retain];
       	started = true;
    	}
 	[pool release];
