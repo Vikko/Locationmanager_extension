@@ -86,11 +86,13 @@ void locationmanager_init(void) {
    	static bool started = false;
    	if(!started) {
        	// Initialize the Objective C accelerometer class.
-       	lc = [[[locationController alloc] init] retain];
+		lc = [locationController alloc];
+		[lc performSelectorOnMainThread:@selector(init) withObject:nil waitUntilDone:NO];
+       	
       	started = true;
    	}
-	[pool release];
 }
+
 
 void locationmanager_get_heading(double *x, double *y, double *z, double *th) {
 	NSLog(@"\n ***** DEBUGGER *****\n Getting heading  x: %f, y: %f, z: %f, heading: %f", gx, gy, gz, gth);
