@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <h1>Single distance</h1>
+  </div>
+
+  <div data-role="content">
+    <% if System::get_property('platform') != 'WINDOWS' %>
+      <p>
+        <a href="/system/map?q=<%= GeoLocation.latitude.to_s+','+GeoLocation.longitude.to_s %>"><%= GeoLocation.latitude.abs.to_s + " " + (GeoLocation.latitude < 0 ? "South" : "North") + ", " +
+          GeoLocation.longitude.abs.to_s + " " + (GeoLocation.longitude < 0 ? "West" : "East") %></a>
+      </p>
+    <% else %>
+      <p>
+        Latitude: <%= @params.latitude.to_s %><br/>
+        Longitude: <%= @params.longitude.to_s %>
+      </p>
+    <% end %>
+    <p>Static Google map at location <%= GeoLocation.latitude.to_s%>,<%= GeoLocation.longitude.to_s%>:<br>
+      <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= GeoLocation.latitude.to_s%>,<%= GeoLocation.longitude.to_s%>&zoom=12&size=200x200&format=png32&sensor=true">
+      </img> 
+    </p>
+      <a href="<%= url_for :action => :get_heading %>" data-remote="true">Heading</a>
+      <div id="heading"></div>
+    <p>
+    
+    </p>
+    <ul>
+      <li><a id="start_test" href="<%= url_for :action => :start %>">Start</a></li>
+      <li><a id="stop_test" href="<%= url_for :action => :stop %>">Stop</a></li>
+    </ul>
+  </div>
+  </div>
+
+</div>

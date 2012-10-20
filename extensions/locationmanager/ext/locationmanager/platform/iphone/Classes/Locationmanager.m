@@ -59,8 +59,6 @@ locationController *lc;
  
 // This delegate method is invoked when the location manager has heading data.
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)heading {
-	NSLog(@"\n\n***** New magnetic heading *****\n %f\n", heading.magneticHeading);
-	NSLog(@"\n\n***** New true heading *****\n %f\n", heading.trueHeading);
 	gx = heading.x;
 	gy = heading.y;
 	gz = heading.z;

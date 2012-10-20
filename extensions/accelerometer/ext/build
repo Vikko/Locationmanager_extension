@@ -1,0 +1,17 @@
+#!/bin/sh
+
+
+if [ "$RHO_PLATFORM" = "android" ]; then
+
+cd accelerometer/platform/android
+rake --trace
+
+elif [ "$RHO_PLATFORM" = "iphone" ]; then
+
+cd accelerometer/platform/iphone
+rake --trace
+
+fi
+
+
+

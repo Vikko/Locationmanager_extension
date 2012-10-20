@@ -1,0 +1,7 @@
+rhodes_path='/Users/vikkosmi/.rvm/gems/ruby-1.9.2-p290/gems/rhodes-3.3.4'
+app_version='0.1'
+app_name='Golf'
+reload_app_changes=0
+debug_port=
+debug_host='127.0.0.1'
+platform='iphone'

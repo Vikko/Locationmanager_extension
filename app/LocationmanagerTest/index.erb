@@ -1,0 +1,24 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Locationmanager Extension Test</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse"
+       <%= "data-ajax='false'" if is_bb6 %>>Home</a>
+      
+  </div>
+
+<div data-role="content">
+	<div id="menu">
+	    <ul data-role="listview">
+	      <li><a href="#" onclick="start_xyz_mag_interval('result_x', 'result_y', 'result_z', 'result_th');">Start Interval</a></li>
+	      <li><a href="#" onclick="stop_xyz_mag_interval();">Stop Interval</a></li>
+	    </ul>
+	</div>
+    <div id="result_x" style="margin-top: 35px;"></div>
+    <div id="result_y"></div>
+    <div id="result_z"></div>
+    <div id="result_th"></div>
+  </div>
+
+</div>
+

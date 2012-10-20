@@ -1,0 +1,34 @@
+require 'fileutils'
+
+def build_extensions(build,arch)
+  Objects = []
+  mkdir_p $tempdir unless File.exists? $tempdir
+  
+  Dir.glob("*.o").each { |f| rm_rf f}
+  Dir.glob("*.a").each { |f| rm_rf f}
+  rm_rf "accelerometer_wrap.c"
+  
+  #swig
+  Dir.glob("*.i").each do |f|
+    puts "swig -ruby #{f}"
+    puts 'swig -ruby #{f}'
+  end
+end
+
+namespace "build"
+  task :config do
+    $targetdir = ENV['TARGET_TEMP_DIR']
+    raise "TARGET_TEMP_DIR is not set" if $targetdir.nil?
+    $tempdir = ENV['TMP_FILES_DIR'] 
+    raise "TMP_FILES_DIR is not set" if $tempdir.nil?
+    $rootdir = ENV['RHO_ROOT'] 
+    raise "RHO_ROOT is not set" if $tempdir.nil?
+    if  ENV['RHO_PLATFORM'] =='iphone'
+  end
+  
+  task :all => :config do
+    build_extensions("accelerometer", $arch)
+  end
+end
+
+task :default => "build:all"

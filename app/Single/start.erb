@@ -1,0 +1,21 @@
+<div data-role="page">
+<p>
+Old x: <%= @long %> </br>
+New x: <%= @goal_long%> 
+</p>
+<p>
+Old y: <%= @lat %> </br>
+New y: <%= @goal_lat%>
+</p>
+
+<p>
+Distance: <%= @distance %> <br/>
+Earth: <%= @earth %> <br/>
+Heading: <%= @heading %> <br/>
+</p>
+<p> 
+Lat Component1: <%= @lat_component1 %> <br/>
+Lat Component2: <%= @lat_component2 %> <br/>
+Combined: <%= @lat_component1 + @lat_component2 %> <br/>
+Asined: <%= Math.asin(@lat_component1 + @lat_component2) %> 
+</div>

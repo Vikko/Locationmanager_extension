@@ -1,0 +1,23 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Accelerometer Extension Test</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse"
+       <%= "data-ajax='false'" if is_bb6 %>>Home</a>
+      
+  </div>
+
+  
+
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="#" onclick="start_xyz_interval('result_x', 'result_y', 'result_z');">Start Interval</a></li>
+      <li><a href="#" onclick="stop_xyz_interval();">Stop Interval</a></li>
+    </ul>
+         <div id="result_x"></div>
+         <div id="result_y"></div>
+         <div id="result_z"></div>
+  </div>
+
+</div>
+
