@@ -1,7 +1,8 @@
-rhodes_path='/Users/vikkosmi/.rvm/gems/ruby-1.9.2-p290/gems/rhodes-3.3.4'
+rhodes_path='C:/MotorolaRhoMobileSuite2.1.1.7/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.4.2'
 app_version='0.1'
 app_name='Golf'
 reload_app_changes=0
 debug_port=
 debug_host='127.0.0.1'
 platform='iphone'
+ext_path=C:/Users/D.H. van Prooijen/RHO-mobile-workspace/Golf App/extensions/locationmanager;

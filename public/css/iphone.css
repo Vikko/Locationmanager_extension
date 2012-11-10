@@ -19,6 +19,109 @@ a {
     list-style-type: none;
 }
 
+
+/* Navigatie bnav menu onderaan*/ 
+.bnav{
+	position: fixed;
+	bottom: 0px;
+	left: 0px: 
+	margin: 0px;
+	list-style-type: none;
+	padding: 0px;
+	width: 100%;
+	max-height: 100px;
+	border-top-style:solid;
+	border-top-width:2px;
+	border-top-color:#34404e;
+	border-right-style:solid;
+	border-right-width:1px;
+	border-right-color:#069;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb), color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
+}
+
+.bnav li{
+	width: 20%;
+	float:left;
+	margin: -1px;
+	padding: 0px;
+	display: inline;
+	border-left-style:solid;
+	border-left-width:1px;
+	border-left-color:#069;
+	position:relative;
+	bottom: 0px;	
+	max-height: 100px;
+}
+
+.bnav img{
+	width: 100%;
+	position:relative;
+	bottom: 0px;
+	max-height: 100px;
+}
+
+/* Homemenu HOMEMENU HOME*/ 
+.homemenu{
+	background: none;
+	vertical-align: middle; 
+	line-height: 1.5em;
+	text-align: left;
+/*	margin-left: auto;
+	margin-right: auto;
+	float: inherit; */
+}
+.homemenu li {
+	width: 80%;
+	margin: 20px;
+	list-style: none;
+	display:block;
+	/*	border-radius: 10px;
+	border-color: red;
+	border-style: solid; 
+	border-width: 2px;
+	background: yellow;
+	padding: 5px 20px;*/
+}
+	
+.homemenu li a{
+	/*	margin: 20px;
+	list-style: none; */
+	display:inherit;	 
+	margin: 0px;
+	border-radius: 10px;
+	border-color: #999;
+	border-style: solid; 
+	border-width: 2px;
+	background: #CCC;
+	padding: 5px 20px;
+	text-align: center;
+}
+
+.homemenu li:active, .homemenu a:active{
+	background: transparent;
+	color:#039 !important;
+}
+
+.center {
+	text-align:center;
+	margin: 0 auto;
+}
+#inputdistance {
+	padding:30px;
+	vertical-align:middle;
+}
+
+.STransparent {
+	padding: 10px;
+	background:rgba(255,255,255,0.5);
+}
+.opmerkingen {
+	padding: 10px;
+	background:rgba(255,0,0,0.5);
+	color:#000; 
+	text-shadow:#00F;
+}
+
 .content ul li {
     overflow: hidden;
     clear: both;
@@ -841,8 +944,9 @@ div.itemValue {
 
 .ui-content {
     min-height: 480px;
-    /* background-image: url(../images/pinstripes.png); */
-    background-color: lightgreen;
+    background-image: url(../images/backgrounds/home_bg_1.png);
+	background-position:center; 
+    /*background-color: black; */
 }
 
 .ui-header .ui-title {
