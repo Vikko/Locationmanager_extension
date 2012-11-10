@@ -5,8 +5,19 @@
     <h1>Single distance</h1>
   </div>
 
-  <div data-role="content">
-    <div>
+  <div data-role="content">  
+  
+    <div class="center">
+        <img src="/public/images/new_course/Arrow.png"height="200" width="200">
+        <div class="center" id="inputdistance">
+            <input type="textfield">Metres
+            <br> <input type="submit" value="Start hole" class="standardbutton">
+        </div>
+    </div>
+    <div class="STransparent">Enter the Length of the hole, <BR> Point the device towards the hole <BR> Press start
+    </div>  
+      
+		<div>
     <form method="POST" action="<%= url_for :action => :set_distance %>">
       <p>
         <label>Distance to target: </label>
