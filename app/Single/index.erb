@@ -7,25 +7,18 @@
 
   <div data-role="content">
     <div>
+    <form method="POST" action="<%= url_for :action => :set_distance %>">
       <p>
         <label>Distance to target: </label>
-        <input id="distance_input" type="text"></input>
-        <input id="submit_distance" type="submit" value="Save"/>
+        <input id="distance_input" type="text" name="distance"></input>
       </p>
-    </div>
-    <div>
       <p>
         <label>Heading: </label>
-        <input id="heading_input" type="text"></input>
-        <input id="submit_heading" type="submit" value="Save"/>
+        <input id="heading_input" type="text" name="heading"></input>
+        <input id="submit_single" type="submit" value="Continue" onclick="stop_heading_interval();"/>
       </p>
+    </form>
     </div>  
-    <a href="<%= url_for :action => :submit %>" onclick="stop_heading_interval();">Continue</a>
+    <!--<a href="<%#= url_for :action => :set_distance %>" onclick="stop_heading_interval();">Continue</a>-->
   </div>
-  <script type="text/javascript">
-  jQuery(document).ready(function($){
-    //start_heading_interval('heading_input');
-    
-  })
-  </script>
 </div>

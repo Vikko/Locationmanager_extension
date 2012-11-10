@@ -1,15 +1,14 @@
 $(document).ready(function(){
-	$("#submit_distance").click(function(e){
+	$("#_submit_distance_").click(function(e){
 		$.ajax({ 
+			data: {
+				distance: $("#distance_input").val(),
+				heading: $("#heading_input").val()
+			},
     		type: 'POST', 
-    		url: 'Single/update_distance'
+    		url: 'Single/update'
 		});
 	})
 	
-	$("#submit_heading").click(function(e){
-		$.ajax({ 
-    		type: 'POST', 
-    		url: 'Single/update_distance'
-		});
-	})
+	start_heading_interval('heading_input');
 });

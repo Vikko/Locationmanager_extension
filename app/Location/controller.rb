@@ -14,11 +14,9 @@ class LocationController < Rho::RhoController
     @response['headers']['Content-Type']='application/json;' 
     data = Locationmanager::Base::get_heading
     x, y, z, th = data
-    # app_info("Get Readings: "+data.to_s)
-    # app_info("x y z mag: "+x.to_s+","+y.to_s+","+z.to_s+","+th.to_s)
     result = '{"heading": ' + th.to_s + '}'
     render :string => result, :use_layout_on_ajax => true
-    # render :string => "ok"
+    
   end
   
 end
