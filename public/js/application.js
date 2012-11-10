@@ -1,4 +1,5 @@
 var xyz_interval = "";
+var heading_interval = "";
 
 function start_xyz_interval(dom_x, dom_y, dom_z) {
   $(document).ready(function() {
@@ -41,4 +42,22 @@ function start_xyz_mag_interval(dom_x, dom_y, dom_z, dom_th) {
 function stop_xyz_mag_interval(){
 	clearInterval(xyz_mag_interval)
 	xyz_mag_interval = ""
+}
+
+function start_heading_interval(dom) {
+  $(document).ready(function() {
+	  if (heading_interval == "") {
+	    heading_interval = setInterval(function(){
+	      $.get('Location/get_heading', {}, function(data){
+	        $('#'+dom).val(data.heading)
+	      });
+	      return false;
+	    }, 300);
+  	}
+  });
+}
+
+function stop_heading_interval(){
+	clearInterval(heading_interval)
+	heading_interval = ""
 }

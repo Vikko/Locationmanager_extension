@@ -5,31 +5,30 @@
   </div>
 
   <div data-role="content">
-    <% if System::get_property('platform') != 'WINDOWS' %>
+    <div>
       <p>
-        <a href="/system/map?q=<%= GeoLocation.latitude.to_s+','+GeoLocation.longitude.to_s %>"><%= GeoLocation.latitude.abs.to_s + " " + (GeoLocation.latitude < 0 ? "South" : "North") + ", " +
-          GeoLocation.longitude.abs.to_s + " " + (GeoLocation.longitude < 0 ? "West" : "East") %></a>
+      <form url="#" name="form_distance" onsubmit="jQuery.ajax( { type: 'POST', url: <%= url_for :action => :update_distance %>} ); return false;" data-ajax="false"> 
+        <label>Distance to target: </label>
+        <input id="distance_input" type="text"></input>
+        <input type="submit" value="Save"/> 
+      </form>
       </p>
-    <% else %>
+    </div>
+    <div>
       <p>
-        Latitude: <%= @params.latitude.to_s %><br/>
-        Longitude: <%= @params.longitude.to_s %>
+        <form url="#" name="form_heading" onsubmit="jQuery.ajax( { type: 'POST', url: <%= url_for :action => :update_heading %>} ); return false;" data-ajax="false">
+          <label>Heading: </label>
+          <input id="heading_input" type="text"></input>
+          <input type="submit" value="Save"/>
+        </form>
       </p>
-    <% end %>
-    <p>Static Google map at location <%= GeoLocation.latitude.to_s%>,<%= GeoLocation.longitude.to_s%>:<br>
-      <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= GeoLocation.latitude.to_s%>,<%= GeoLocation.longitude.to_s%>&zoom=12&size=200x200&format=png32&sensor=true">
-      </img> 
-    </p>
-      <a href="<%= url_for :action => :get_heading %>" data-remote="true">Heading</a>
-      <div id="heading"></div>
-    <p>
+    </div>  
+    <a href="<%= url_for :action => :submit %>" onclick="stop_heading_interval();">Continue</a>
+  </div>
+  <script type="text/javascript">
+  jQuery(document).ready(function($){
+    //start_heading_interval('heading_input');
     
-    </p>
-    <ul>
-      <li><a id="start_test" href="<%= url_for :action => :start %>">Start</a></li>
-      <li><a id="stop_test" href="<%= url_for :action => :stop %>">Stop</a></li>
-    </ul>
-  </div>
-  </div>
-
+  })
+  </script>
 </div>
