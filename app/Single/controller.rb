@@ -36,7 +36,6 @@ class SingleController < Rho::RhoController
       @goal_lat = rad_to_deg(goal_lat)
       @goal_long = rad_to_deg(goal_long)
 #    end
-    render :start
   end 
 
   
@@ -58,5 +57,10 @@ class SingleController < Rho::RhoController
   def update_heading
     @@heading = @params[:heading_input].to_f
     render :string => "ok"
+  end
+  
+  def submit
+    result
+    render :submit
   end
 end
