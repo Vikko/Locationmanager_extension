@@ -10,5 +10,5 @@ $(document).ready(function(){
 		});
 	})
 	
-	start_heading_interval('heading_input');
+//	start_heading_interval('heading_input');
 });

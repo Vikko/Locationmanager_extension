@@ -25,7 +25,7 @@ class SingleController < Rho::RhoController
   
   def calculate
     get_location
-    if GeoLocation.known_position? 
+#    if GeoLocation.known_position? 
       heading_in_rad = deg_to_rad(@@heading)
       lat_in_rad = deg_to_rad(@@lat)
       long_in_rad = deg_to_rad(@@long)
@@ -42,7 +42,7 @@ class SingleController < Rho::RhoController
       @@goal_long = long_in_rad + Math.atan2( long_component1, long_component2 )
       @goal_lat = rad_to_deg(@@goal_lat)
       @goal_long = rad_to_deg(@@goal_long)
-    end
+#    end
     set_vars
     render :action => :submit
   end 
