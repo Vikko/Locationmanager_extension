@@ -14,8 +14,12 @@ class SingleController < Rho::RhoController
   end
   
   def get_location
-    @@lat = 51.989610003665305#GeoLocation.latitude # 51.989610003665305   
-    @@long = 4.344027028600576#GeoLocation.longitude # 4.344027028600576
+    @@lat = 51.989610003665305
+    @@long = 4.344027028600576
+    if GeoLocation.known_position? 
+      @@long = GeoLocation.longitude
+      @@lat = GeoLocation.latitude
+    end
   end
   
   def calculate

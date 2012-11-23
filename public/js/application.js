@@ -49,10 +49,10 @@ function start_heading_interval(dom) {
 	  if (heading_interval == "") {
 	    heading_interval = setInterval(function(){
 	      $.get('Location/get_heading', {}, function(data){
-	        $('#'+dom).val(data.heading)
+	        $('#'+dom).rotate(360-(data.heading%360))
 	      });
 	      return false;
-	    }, 300);
+	    }, 1000);
   	}
   });
 }
