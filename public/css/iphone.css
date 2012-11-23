@@ -121,6 +121,11 @@ a {
 	color:#000; 
 	text-shadow:#00F;
 }
+#compass{
+	position:absolute;
+	top:60px;
+	left:10px;
+}
 
 .content ul li {
     overflow: hidden;

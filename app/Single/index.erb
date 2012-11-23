@@ -4,32 +4,23 @@
   <div data-role="header" data-position="inline">
     <h1>Single distance</h1>
   </div>
-
-  <div data-role="content">  
-  
+  <div data-role="content">
+    <img id="compass" src="/public/images/icons/compass.png"height="100" width="100">      
     <div class="center">
-        <img src="/public/images/new_course/Arrow.png"height="200" width="200">
-        <div class="center" id="inputdistance">
-            <input type="textfield">Metres
-            <br> <input type="submit" value="Start hole" class="standardbutton">
-        </div>
-    </div>
-    <div class="STransparent">Enter the Length of the hole, <BR> Point the device towards the hole <BR> Press start
-    </div>  
-      
-		<div>
     <form method="POST" action="<%= url_for :action => :set_distance %>">
-      <p>
-        <label>Distance to target: </label>
-        <input id="distance_input" type="text" name="distance"></input>
-      </p>
-      <p>
-        <label>Heading: </label>
+        <img src="/public/images/new_course/Arrow.png"height="200" width="200">
+              <div class="center" id="inputdistance">
+              <label>Distance to target: </label>
+              <input id="distance_input" type="text" name="distance"></input> metres
+              </div>
+        <div class="STransparent"><label>Heading: </label>
         <input id="heading_input" type="text" name="heading"></input>
-        <input id="submit_single" type="submit" value="Continue" onclick="stop_heading_interval();"/>
-      </p>
+        </div>
+        <input class="standardbutton" id="submit_single" type="submit" value="Start hole" onclick="stop_heading_interval();"/>
     </form>
-    </div>  
+    </div>
+        <div class="STransparent">Enter the Length of the hole, <BR> Point the device towards the hole <BR> Press start
+        </div>   
     <!--<a href="<%#= url_for :action => :set_distance %>" onclick="stop_heading_interval();">Continue</a>-->
   </div>
 </div>
