@@ -1,7 +1,6 @@
 require 'rho/rhocontroller'
 
 class NewCourseController < Rho::RhoController
-  @layout = :simplelayout
   
   def index
     render :back => '/app'  
