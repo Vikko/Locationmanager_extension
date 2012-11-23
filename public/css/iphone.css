@@ -108,8 +108,11 @@ a {
 	margin: 0 auto;
 }
 #inputdistance {
-	padding:30px;
 	vertical-align:middle;
+}
+
+#distance_input {
+	margin: 10px 0;
 }
 
 .STransparent {

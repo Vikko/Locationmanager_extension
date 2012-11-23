@@ -31,7 +31,7 @@
     .ui-select,
     input.ui-input-text,
     textarea.ui-input-text,
-    .ui-input-search { margin-left: 20px; }
+    .ui-input-search { margin: 0px; }
 }
 
 /* fix for https://www.pivotaltracker.com/story/show/19794687 */

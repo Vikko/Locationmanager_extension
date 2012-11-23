@@ -1,7 +1,6 @@
 require 'rho/rhocontroller'
 
 class SingleController < Rho::RhoController
-  @layout = :simplelayout
   @@swing = nil
   @@lat = 0.0
   @@long = 0.0

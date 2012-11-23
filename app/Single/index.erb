@@ -9,26 +9,25 @@
     <div class="center">
     <form method="POST" action="<%= url_for :action => :set_distance %>">
         <img src="/public/images/new_course/Arrow.png" height="200" width="200">
-              <div class="center" id="inputdistance">
-              <table>
-              <tr>
-              <td align="center">
-              <label> par:</label>
-              <select>
-                <option value="par3"> 3 </option>
-                <option value="par4"> 4 </option>
-                <option value="par5"> 5 </option>
-              </select>
-              </td>
-              <td align="center">
-              <label>Distance to target: </label>
-              <input id="distance_input" type="text" name="distance"></input> meters
-              </div>
-              </td>
-              </tr>
-              </table>
+        <div class="center" id="inputdistance">
+					<div style="float:left; width: 45%;">
+          	<label> par:</label><br/>
+            <select>
+              <option value="par3"> 3 </option>
+              <option value="par4"> 4 </option>
+              <option value="par5"> 5 </option>
+            </select>
+					</div>
+					<div style="float:left; width: 45%;">
+						<label>Distance to target: </label><br/>
+						<div id="distance_input">
+							<input id="distance_input_field" type="text" name="distance"></input> meters
+						</div>
+        	</div>
+					<div style="clear:both;"></div>
+        </div>
         <div class="STransparent" style="display:none;"><label>Heading: </label>
-        <input id="heading_input" type="text" name="heading" value="0"></input>
+        	<input id="heading_input" type="text" name="heading" value="0"></input>
         </div>
         <input class="standardbutton" id="submit_single" type="submit" value="Start hole" onclick="stop_heading_interval();"/>
     </form>
