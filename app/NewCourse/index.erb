@@ -6,37 +6,32 @@
     <h1>New Course</h1>
   </div>
   <div data-role="content">
-  
-  <div class="center">
-  <p class="opmerkingen"> het submitten werkt nog niet. bij keuze 9 holes: waarde 9 mee geven voor het bijhouden van 9 holes achter elkaas<br> bij keuze 18 holes idem, maar 18 holes bijhouden.</p> 
-      <br>
-      <form method="get" action="/app/NewCourse/Holes/index.erb"> 
-        <input type="submit" value="Start 9 holes course" class="standardbutton">  
-      </form>
-      <a href url="/NewCourse/Holes/">volgende pagina</a>
-      <br> 
-      <input type="submit" value="Start 18 holes course" class="standardbutton">
-  </div>
-    
-    
-      
-      <ul data-role="listview">
-      <li><p>To reset result just reload the page..</p></li>
-      <li>
-        <a href="#" id="calc">
-                Read JSON object via AJAX call
-        </a>
-      </li>
-    </ul>
-  </div>
-  
-  <a href="#" onclick="start_xyz_interval('result_x', 'result_y', 'result_z');">Start Interval</a>
-  <a href="#" onclick="stop_xyz_interval();">Stop Interval</a>
-
-  <div>X = <span id="result_x"></span></div>
-  <div>Y = <span id="result_y"></span></div>
-  <div>Z = <span id="result_z"></span></div>
-
+        <div class="center">
+            <form method="get" action="/app/NewCourse/Holes/index.erb">   
+            <p>Golf Club name:
+               <br> <input id="coursename_input" type="text" name="coursename"></input>
+               <br>Course name:
+               <br> <input id="coursename_input" type="text" name="coursename"></input>
+            </p>
+              <select>
+                <option value="9hole"> 9 holes course </option>
+                <option value="18hole"> 18 holes course </option>
+              </select>
+              <select>
+                <option value="man"> Male </option>
+                <option value="woman"> Female </option>
+              </select>
+              <select>
+                <option value="free"> Regular player</option>
+                <option value="pro"> Professional </option>
+              </select>
+            </form>
+            <input type="submit" value="Start playing" class="standardbutton">
+        </div>
+        <div class="STransparent">
+              Select the settings for this new course
+        </div>
+        <p class="opmerkingen"> het start playing werkt nog niet. <br> de pulldown keuzes opslaan in DB. belangrijk voor onthouden van verschillende afstanden voor vrouwen/mannen</p> 
 
 </div>
 
