@@ -13,21 +13,29 @@ class Swing
   EARTHRADIUS = 6368500.0
   PI = 3.141592653589793
   
+  def valid?
+    return (self.lat_start != nil && self.long_start!= nil && self.heading != nil && self.distance != nil)
+  end
+  
+  def endpoint?
+    return (self.lat_end != nil && self.long_end!= nil)
+  end
+  
   def calculate
-   if (self.lat_start != nil && self.long_start!= nil && self.heading != nil)
-      heading_in_rad = deg_to_rad(self.heading)
-      lat_in_rad = deg_to_rad(self.lat_start)
-      long_in_rad = deg_to_rad(self.long_start)
+     if valid?
+        heading_in_rad = deg_to_rad(self.heading)
+        lat_in_rad = deg_to_rad(self.lat_start)
+        long_in_rad = deg_to_rad(self.long_start)
 
-      lat_component1 = (Math.sin(lat_in_rad) * Math.cos(self.distance / EARTHRADIUS))
-      lat_component2 = (Math.cos(lat_in_rad) * Math.sin(self.distance / EARTHRADIUS) * Math.cos(heading_in_rad))
-      self.lat_end = Math.asin(lat_component1 + lat_component2)
-      long_component1 = (Math.sin(heading_in_rad) * Math.sin(self.distance / EARTHRADIUS) * Math.cos(lat_in_rad))
-      long_component2 = (Math.cos(self.distance / EARTHRADIUS) - Math.sin(lat_in_rad) * Math.sin(self.lat_end))
-      self.long_end = long_in_rad + Math.atan2( long_component1, long_component2 )
-      self.lat_end = rad_to_deg(self.lat_end)
-      self.long_end = rad_to_deg(self.long_end)
-   end
+        lat_component1 = (Math.sin(lat_in_rad) * Math.cos(self.distance / EARTHRADIUS))
+        lat_component2 = (Math.cos(lat_in_rad) * Math.sin(self.distance / EARTHRADIUS) * Math.cos(heading_in_rad))
+        self.lat_end = Math.asin(lat_component1 + lat_component2)
+        long_component1 = (Math.sin(heading_in_rad) * Math.sin(self.distance / EARTHRADIUS) * Math.cos(lat_in_rad))
+        long_component2 = (Math.cos(self.distance / EARTHRADIUS) - Math.sin(lat_in_rad) * Math.sin(self.lat_end))
+        self.long_end = long_in_rad + Math.atan2( long_component1, long_component2 )
+        self.lat_end = rad_to_deg(self.lat_end)
+        self.long_end = rad_to_deg(self.long_end)
+     end
   end
   
   def update(lat, long)

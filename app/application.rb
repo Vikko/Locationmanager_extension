@@ -1,5 +1,5 @@
 require 'rho/rhoapplication'
-# require 'locationmanager'
+require 'locationmanager'
 
 class AppApplication < Rho::RhoApplication
   def initialize
@@ -7,9 +7,15 @@ class AppApplication < Rho::RhoApplication
     # Super must be called *after* settings @tabs!
     @tabs = nil
     
-    # Locationmanager::Base::init
+    Locationmanager::Base::init
     #To remove default toolbar uncomment next line:
     @@toolbar = nil
+    # [
+    #       {:action => :separator},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'}
+    #     ]
     super
 
     # Uncomment to set sync notification callback to /app/Settings/sync_notify.
