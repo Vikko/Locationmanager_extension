@@ -127,6 +127,27 @@ a {
 	left:10px;
 }
 
+.scorecard{
+	border-style:solid;
+	border-width:2px;
+	border-color:#009;
+}
+.scorecard tr{
+	border-bottom-color:#CCC;
+	border-style:solid;
+	background-color:#FFF;
+}
+
+#toprowscorecard{
+	background-color:#090;
+	border-bottom-style:double;
+	border-bottom-color:#000;
+}
+#activerowscorecard{
+	background-color:#39F;
+	border-color:#666;
+}
+
 .content ul li {
     overflow: hidden;
     clear: both;
