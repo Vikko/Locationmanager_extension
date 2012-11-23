@@ -1,19 +1,15 @@
 <div data-role="page">
 <p>
 Old x: <%= @long %> </br>
-New x: <%= @goal_long%> 
+New x: <%= @swing.long_end %> 
 </p>
 <p>
 Old y: <%= @lat %> </br>
-New y: <%= @goal_lat%>
+New y: <%= @swing.lat_end%>
 </p>
 
 <p>
-Distance: <%= @distance %> <br/>
-Earth: <%= @earth %> <br/>
-Heading: <%= @heading %> <br/>
+Distance: <%= @swing.distance %> <br/>
+Earth: <%= Swing::EARTHRADIUS %> <br/>
+Heading: <%= @swing.heading %> <br/>
 </p>
-<p> 
-Long Component1: <%= @long_component1 %> <br/>
-Long Component2: <%= @long_component2 %> <br/> 
-</div>
