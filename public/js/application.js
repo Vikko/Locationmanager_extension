@@ -44,15 +44,17 @@ function stop_xyz_mag_interval(){
 	xyz_mag_interval = ""
 }
 
-function start_heading_interval(dom) {
+function start_heading_interval(compass, dom) {
   $(document).ready(function() {
 	  if (heading_interval == "") {
 	    heading_interval = setInterval(function(){
 	      $.get('Location/get_heading', {}, function(data){
-	        $('#'+dom).val(data.heading)
+					data.heading = Math.round(data.heading);
+	        $('#'+compass).rotate(360-(data.heading%360));
+					$('#'+dom).val(data.heading);
 	      });
 	      return false;
-	    }, 300);
+	    }, 200);
   	}
   });
 }
