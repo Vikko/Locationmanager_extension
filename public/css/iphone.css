@@ -72,7 +72,7 @@ a {
 }
 .homemenu li {
 	width: 80%;
-	margin: 20px;
+	margin: 0px;
 	list-style: none;
 	display:block;
 	/*	border-radius: 10px;
