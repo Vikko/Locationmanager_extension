@@ -31,8 +31,8 @@ class SingleController < Rho::RhoController
   
   def update
     get_location
-    if @@swing.valid?
-      @heading, @distance = @@swing.update(@@lat, @@long)
+    if @@swing.endpoint?
+      @distance, @heading = @@swing.update(@@lat, @@long)
     end
     set_vars 
     render :partial => "information"

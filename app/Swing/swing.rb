@@ -17,6 +17,10 @@ class Swing
     return (self.lat_start != nil && self.long_start!= nil && self.heading != nil && self.distance != nil)
   end
   
+  def endpoint?
+    return (self.lat_end != nil && self.long_end!= nil)
+  end
+  
   def calculate
      if valid?
         heading_in_rad = deg_to_rad(self.heading)
