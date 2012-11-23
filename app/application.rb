@@ -10,6 +10,12 @@ class AppApplication < Rho::RhoApplication
     # Locationmanager::Base::init
     #To remove default toolbar uncomment next line:
     @@toolbar = nil
+    # [
+    #       {:action => :separator},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'},
+    #       {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'}
+    #     ]
     super
 
     # Uncomment to set sync notification callback to /app/Settings/sync_notify.

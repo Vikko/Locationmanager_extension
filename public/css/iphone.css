@@ -37,6 +37,7 @@ a {
 	border-right-width:1px;
 	border-right-color:#069;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb), color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
+	z-index: 100;
 }
 
 .bnav li{
