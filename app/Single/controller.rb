@@ -1,10 +1,6 @@
 require 'rho/rhocontroller'
 
 class SingleController < Rho::RhoController
-  @@swing = nil
-  @@lat = 0.0
-  @@long = 0.0
-
   def index
     get_location
     render :back => '/app'  
@@ -21,8 +17,8 @@ class SingleController < Rho::RhoController
   
   def calculate
     get_location
-    if @@swing != nil && @@swing.valid?
-      @@swing.calculate
+    if @@hole != nil && @@hole.valid?
+      @@hole.calculate
     end 
     set_vars
     render :action => :submit
@@ -30,9 +26,9 @@ class SingleController < Rho::RhoController
   
   def update
     get_location
-    if @@swing.endpoint?
-      @distance, @heading = @@swing.update(@@lat, @@long)
-    end
+    @@hole.update(@@lat, @@long)
+    @distance = @@hole.distance
+    @heading = @@hole.heading
     set_vars 
     render :partial => "information"
   end
@@ -40,12 +36,12 @@ class SingleController < Rho::RhoController
   def set_vars
     @lat = @@lat
     @long = @@long
-    @swing = @@swing
+    @hole = @@hole
   end
   
   def set_distance
-    @@swing = Swing.create(:lat_start => @@lat, :long_start => @@long, :distance => @params["distance"].to_f, :heading => @params["heading"].to_f);
-    if @@swing.valid? 
+    @@hole = Hole.create(:start_lat => @@lat, :start_long => @@long, :distance => @params["distance"].to_f, :heading => @params["heading"].to_f, :par => @params["par"].to_i);
+    if @@hole.valid? 
       calculate
     end
   end

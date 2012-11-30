@@ -20,15 +20,15 @@ class AppApplication < Rho::RhoApplication
           :place_tabs_bottom => true,
           :tabs => [
             { :label => "Single", :action => '/app/Single', 
-              :icon => "/public/images/icons/single.png", :reload => true, :colored_icon => true }, 
+              :icon => "/public/images/icons/single_v2.png", :reload => true, :colored_icon => true }, 
             { :label => "New Course",  :action => '/app/NewCourse',  
-              :icon => "/public/images/icons/single.png", :reload => true, :colored_icon => true },
+              :icon => "/public/images/icons/distance_v2.png", :reload => true, :colored_icon => true },
             { :label => "History",  :action => '/app/History',  
-              :icon => "/public/images/icons/single.png", :reload => true, :colored_icon => true },
+              :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => false },
             { :label => "Scorecard",   :action => '/app/Scorecard', 
-              :icon => "/public/images/icons/single.png", :reload => true, :colored_icon => true },
+              :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => true },
             { :label => "Settings",   :action => '/app/Settings', 
-              :icon => "/public/images/icons/single.png", :reload => true, :colored_icon => true }
+              :icon => "/public/images/icons/settings_v2.png", :reload => true, :colored_icon => true }
           ]
         })
           

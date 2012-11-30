@@ -1,8 +1,10 @@
-<img src="http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&size=300x400&format=png32&markers=color:blue%7Csize:mid%7Clabel:You%7C<%= @lat %>,<%= @long %>&markers=color:red%7Clabel:Goal%7C<%= @swing.lat_end %>,<%= @swing.long_end %>&sensor=true">
+<img src="http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&size=300x400&format=png32&markers=color:blue%7Csize:mid%7Clabel:You%7C<%= @lat %>,<%= @long %>&markers=color:red%7Clabel:Goal%7C<%= @hole.goal_lat %>,<%= @hole.goal_long %>&sensor=true">
 <p>    
-  Heading: <%= @swing.heading %> <br/>
-  Distance: <%= @swing.distance %>
+  Heading: <%= @hole.heading %> <br/>
+  Distance: <%= @hole.distance %>
 </p>
+
 <script type="text/javascript">
-	$("#compass").rotate(<%= @swing.heading %>);
+	$("#compass").rotate(<%= @hole.heading %>);
 </script>
+<!-- <a href="/app/Hole">Holes</a> -->

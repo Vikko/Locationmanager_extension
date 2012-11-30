@@ -13,9 +13,9 @@
 					<div style="float:left; width: 45%;">
           	<label> par:</label><br/>
             <select>
-              <option value="par3"> 3 </option>
-              <option value="par4"> 4 </option>
-              <option value="par5"> 5 </option>
+              <option value="3" <%= "selected" if @hole && Integer(@hole.par) == 3 %>> 3 </option>
+              <option value="4" <%= "selected" if @hole && Integer(@hole.par) == 4 %>> 4 </option>
+              <option value="5" <%= "selected" if @hole && Integer(@hole.par) == 5 %>> 5 </option>
             </select>
 					</div>
 					<div style="float:left; width: 45%;">
