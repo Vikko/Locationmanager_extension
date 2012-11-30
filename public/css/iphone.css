@@ -21,7 +21,7 @@ a {
 
 
 /* Navigatie bnav menu onderaan*/ 
-.bnav{
+/*.bnav{
 	position: absolute;
 	bottom: 0px;
 	left: 0px; 
@@ -59,7 +59,7 @@ a {
 	position:relative;
 	bottom: 0px;
 	max-height: 100px;
-}
+}*/
 
 /* Homemenu HOMEMENU HOME*/ 
 .homemenu{
@@ -135,21 +135,20 @@ a {
 	border-style:solid;
 	border-width:2px;
 	border-color:#009;
+	padding:0px;
 }
 .scorecard tr{
-	border-bottom-color:#CCC;
-	border-style:solid;
 	background-color:#FFF;
 }
 
 #toprowscorecard{
-	background-color:#090;
-	border-bottom-style:double;
-	border-bottom-color:#000;
+	background-color:#090 !important;
+	border-bottom-style:double !important;
+	border-bottom-color:#000 !important;
 }
 #activerowscorecard{
-	background-color:#39F;
-	border-color:#666;
+	background-color:#39F !important;
+	border-color:#666 !important;
 }
 
 .content ul li {
