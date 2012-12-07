@@ -24,7 +24,7 @@ class AppApplication < Rho::RhoApplication
             { :label => "New Course",  :action => '/app/NewCourse',  
               :icon => "/public/images/icons/distance_v2.png", :reload => true, :colored_icon => true },
             { :label => "History",  :action => '/app/History',  
-              :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => false },
+              :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => true },
             { :label => "Scorecard",   :action => '/app/Scorecard', 
               :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => true },
             { :label => "Settings",   :action => '/app/Settings', 
@@ -33,18 +33,6 @@ class AppApplication < Rho::RhoApplication
         })
           
     @@toolbar = nil
-    # { :buttons =>     [
-    #       { :label => "Single", :action => '/app/Single', 
-    #         :icon => "/public/images/icons/single.png", :reload => true }, 
-    #       { :label => "New Course",  :action => '/app/NewCourse',  
-    #         :icon => "/public/images/icons/single.png", :reload => true },
-    #       { :label => "History",  :action => '/app/History',  
-    #         :icon => "/public/images/icons/single.png", :reload => true },
-    #       { :label => "Scorecard",   :action => '/app/Scorecard', 
-    #         :icon => "/public/images/icons/single.png", :reload => true },
-    #       { :label => "Settings",   :action => '/app/Settings', 
-    #         :icon => "/public/images/icons/single.png", :reload => true }
-    #     ], :background_color => 0x0000FF, :mask_color => 0xFFFFFF, :view_height => 200 }
     super
 
     # Uncomment to set sync notification callback to /app/Settings/sync_notify.

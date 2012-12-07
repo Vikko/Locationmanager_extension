@@ -41,17 +41,17 @@ class Hole
   end
   
   def update(lat, long)
-     dLat = (self.goal_lat - deg_to_rad(lat))
-     dLong = (self.goal_long - deg_to_rad(long))  
+     dLat = (deg_to_rad(lat) - deg_to_rad(self.goal_lat))
+     dLong = (deg_to_rad(long) - deg_to_rad(self.goal_long))  
      a = Math.sin(dLat/2) * Math.sin(dLat/2) +
              Math.sin(dLong/2) * Math.sin(dLong/2) * Math.cos(deg_to_rad(lat)) * Math.cos(self.goal_lat); 
      c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-     self.distance = EARTHRADIUS * c;
+     distance = EARTHRADIUS * c;
      y = Math.sin(dLong) * Math.cos(self.goal_lat);
      x = Math.cos(deg_to_rad(lat))*Math.sin(self.goal_lat) -
              Math.sin(deg_to_rad(lat))*Math.cos(self.goal_lat)*Math.cos(dLong);
-     self.heading = (360 + rad_to_deg(Math.atan2(y, x))) % 360;
-     return [self.distance, self.heading]
+     heading = (360 + rad_to_deg(Math.atan2(y, x))) % 360;
+     return [distance, heading]
    end
    
    def deg_to_rad(deg)

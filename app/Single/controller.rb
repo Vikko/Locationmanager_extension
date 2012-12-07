@@ -20,15 +20,15 @@ class SingleController < Rho::RhoController
     if @@hole != nil && @@hole.valid?
       @@hole.calculate
     end 
+    @distance = @@hole.distance
+    @heading = @@hole.heading
     set_vars
     render :action => :submit
   end 
   
   def update
     get_location
-    @@hole.update(@@lat, @@long)
-    @distance = @@hole.distance
-    @heading = @@hole.heading
+    @distance, @heading = @@hole.update(@@lat, @@long)
     set_vars 
     render :partial => "information"
   end

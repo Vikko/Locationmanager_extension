@@ -41,7 +41,7 @@ class Swing
    end
   
    def deg_to_rad(deg)
-     rad = (PI * (deg % 360.0) / 180) 
+     rad = (PI * (deg + 360 % 360.0) / 180) 
      return rad
    end
 

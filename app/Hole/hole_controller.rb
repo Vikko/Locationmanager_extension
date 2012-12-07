@@ -41,7 +41,7 @@ class HoleController < Rho::RhoController
     @hole = Hole.create(@params['hole'])
     redirect :action => :index
   end
-
+  
   # POST /Hole/{1}/update
   def update
     @hole = Hole.find(@params['id'])
