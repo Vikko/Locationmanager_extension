@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <h1>User Settings</h1>
+  </div>
+
+  <div data-role="content">
+      <div class="center">
+          <form method="get" action="/app/NewCourse/Holes/index.erb">   
+              User Name:(moet worden gehaald uit de database, indien bekend)<br>
+              <input id="user_name" type="text" name="username"></input><br>
+              Password:<br>  
+              <input id="user_password" type="text" name="user"></input><br>
+              Current Playing Handicap:<br> 
+              <input id="user_handicap" type="text" name="userhandicap"></input><br>
+              Home Golf Club:<br> 
+              <input id="user_home_golf_club" type="text" name="userhomegolfclub"></input><br><br>
+            <select>
+              <option value="male"> Male </option>
+              <option value="female"> Female </option>
+            </select>
+            <select>
+              <option value="free"> Regular player</option>
+              <option value="pro"> Professional </option>
+            </select>
+          </form>
+          <input type="submit" value="Save Settings" class="standardbutton">
+      </div>
+  </div>
+</div>

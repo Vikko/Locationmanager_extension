@@ -1,0 +1,30 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <h1>Application Settings</h1>
+  </div>
+
+  <div data-role="content">
+  <br>
+      <div class="center">
+          <form method="get" action="/app/NewCourse/Holes/index.erb">   
+            Application Interface <br>
+            <select>
+              <option value="Basic"> Basic interface </option>
+              <option value="Expert"> Full interface </option>
+            </select><br>
+            Homescreen <br>
+            <select>
+              <option value="Single"> Single Distance</option>
+              <option value="New"> New Course</option>
+              <option value="History"> History</option>
+              <option value="Settings"> Settings </option>
+            </select><br>
+          </form>
+          <input type="submit" value="Save Settings" class="standardbutton">
+        <ul class="homemenu">
+          <li><a href="\Settings\SettingsApplication\About">About</a></li>
+        </ul> 
+      </div>
+  </div>
+</div>
