@@ -23,7 +23,7 @@ class HoleController < Rho::RhoController
   # GET /Hole/new
   def new
     @hole = Hole.new
-    render :action => :new, :back => url_for(:action => :index)
+    render :action => :new, :back => '/app'
   end
 
   # GET /Hole/{1}/edit

@@ -7,26 +7,26 @@
   </div>
   <div data-role="content">
         <div class="center">
-            <form method="get" action="/app/NewCourse/Holes/index.erb">   
+            <form method="POST" action="<%= url_for :action => :new_course %>">  
             <p>Golf Club name:
-               <br> <input id="coursename_input" type="text" name="coursename"></input>
+               <br> <input id="newcourse_club_name" type="text" name="newcourse[club_name]"></input>
                <br>Course name:
-               <br> <input id="coursename_input" type="text" name="coursename"></input>
+               <br> <input id="newcourse_course_name" type="text" name="newcourse[course_name]"></input>
             </p>
-              <select>
-                <option value="9hole"> 9 holes course </option>
-                <option value="18hole"> 18 holes course </option>
+              <select id="newcourse_holes_count" name="newcourse[holes_count]">
+                <option value="9"> 9 holes course </option>
+                <option value="18"> 18 holes course </option>
               </select>
-              <select>
-                <option value="man"> Male </option>
-                <option value="woman"> Female </option>
+              <select id="newcourse_gender" name="newcourse[gender]">
+                <option value="1"> Male </option>
+                <option value="0"> Female </option>
               </select>
-              <select>
-                <option value="free"> Regular player</option>
-                <option value="pro"> Professional </option>
+              <select id="newcourse_player_level" name="newcourse[player_level]">
+                <option value="1"> Regular player</option>
+                <option value="0"> Professional </option>
               </select>
+	            <input type="submit" value="Start playing" class="standardbutton">
             </form>
-            <input type="submit" value="Start playing" class="standardbutton">
         </div>
         <div class="STransparent">
               Select the settings for this new course

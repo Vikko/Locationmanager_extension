@@ -7,8 +7,8 @@ class Swing
   property :long_end, :float
   property :distance, :float
   property :heading, :float
+  property :hole_id, :float
   
-  # property :hole_id, :integer
   belongs_to :hole_id, 'Hole'
 
   EARTHRADIUS = 6368500.0
@@ -22,8 +22,12 @@ class Swing
     return (self.lat_end != nil && self.long_end!= nil)
   end
   
+  def hole=(hole)
+    self.hole_id = hole.object
+  end
+  
   def hole
-    Hole.find(self.hole_id)
+    return Hole.find(self.hole_id)
   end
   
   def update(lat, long)
