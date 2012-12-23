@@ -10,6 +10,7 @@ class Hole
   property :heading, :float
   property :course_id, :float
   property :temp, :boolean
+  property :hole_nr, :integer
   
   belongs_to :course_id, 'Course'
   

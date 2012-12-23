@@ -7,4 +7,8 @@ class Course
   property :temp, :boolean
   property :gender, :boolean #true = male
   property :player_level, :boolean #true = regular
+  
+  def get_holes
+    Hole.find(:all, :conditions => ["course_id = ?", self.object])
+  end
 end

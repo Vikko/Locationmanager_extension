@@ -55,7 +55,7 @@ class SingleController < Rho::RhoController
       hole.delete
     end
     @@course = Course.create(:club_name => "", :course_name => "Single distance", :holes_count => 1, :temp => true)
-    @@hole = Hole.create(:start_lat => @@lat, :start_long => @@long, :distance => @params["distance"].to_f, :heading => @params["heading"].to_f, :par => @params["par"].to_i, :course_id => @@course.object, :temp => true);
+    @@hole = Hole.create(:start_lat => @@lat, :start_long => @@long, :distance => @params["distance"].to_f, :heading => @params["heading"].to_f, :par => @params["par"].to_i, :course_id => @@course.object, :hole_nr => 1, :temp => true);
 
     if @@hole.valid? 
       calculate

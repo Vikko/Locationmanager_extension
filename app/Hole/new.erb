@@ -1,12 +1,37 @@
 <div data-role="page" data-add-back-btn="true">
   <div data-role="header" data-position="inline">
-    <h1>New Course</h1>
+    <h1><%= @course.holes_count %> holes course</h1>
   </div>
   <div data-role="content">  
-	  <div class="center">
-	  	<p class="opmerkingen">"<strong>first</strong>" hole moet aangepast worden als er al een hole gespeeld is</p>
-      <br> <a href="<%= :action => :first_hole %>" value="Start First hole" class="standardbutton">
-      <br> <a href="<%= :action => :other_hole %>" value="Start from other hole" class="standardbutton">
-	  </div>
+		<img id="compass" src="/public/images/icons/compass.png" height="100" width="100">      
+    <div class="center">
+    <form method="POST" action="<%= url_for :action => :create_hole %>">
+        <img src="/public/images/new_course/Arrow.png" height="200" width="200">
+        <div class="center" id="inputdistance">
+					<div style="float:left; width: 45%;">
+          	<label> par:</label><br/>
+            <select id="hole_par" name="hole[par]">
+              <option value="3" <%= "selected" if @hole && @hole.par && Integer(@hole.par) == 3 %>> 3 </option>
+              <option value="4" <%= "selected" if @hole && @hole.par && Integer(@hole.par) == 4 %>> 4 </option>
+              <option value="5" <%= "selected" if @hole && @hole.par && Integer(@hole.par) == 5 %>> 5 </option>
+            </select>
+					</div>
+					<div style="float:left; width: 45%;">
+						<label>Distance to target: </label><br/>
+						<div id="distance_input">
+							<input id="distance_input_field" type="text" name="hole[distance]"></input> meters
+						</div>
+        	</div>
+					<div style="clear:both;"></div>
+        </div>
+        <div class="STransparent" style="display:none;"><label>Heading: </label>
+        	<input id="heading_input" type="text" name="hole[heading]" value="90"></input>
+        </div>
+        	<input id="hole_hole_nr" type="hidden" name="hole[hole_nr]" value="<%= @hole.hole_nr %>"></input>
+        <input class="standardbutton" id="submit_hole" type="submit" value="Start hole <%= @hole.hole_nr if @hole && @hole.hole_nr %>" onclick="stop_heading_interval();"/>
+    </form>
+    </div>
+        <div class="STransparent">Select the Par type, enter the Length of the hole, <BR> Point the device towards the hole <BR> Press start
+        </div>
 	</div> 
 </div>
