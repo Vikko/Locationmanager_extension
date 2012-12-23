@@ -1,0 +1,7 @@
+<% i = 0 %>
+<% @swings.each do |s| %>
+	Swing: <%= i = i + 1 %><br/>
+	Start:<%= s.lat_start%>,<%= s.long_start %><br/>
+	Stop:<%= s.lat_end%>,<%=s.long_end %><br/>
+	=====
+<% end %>

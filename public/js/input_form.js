@@ -8,7 +8,6 @@ $(document).ready(function(){
     		type: 'POST', 
     		url: 'Single/update'
 		});
-	})
-	
+	})	
 	// start_heading_interval('compass','heading_input');
 });

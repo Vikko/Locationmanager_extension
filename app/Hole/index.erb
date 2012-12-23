@@ -1,5 +1,6 @@
 <div data-role="page" data-add-back-btn="true">
 <% @holes.each do |hole| %>
-	<%= hole.inspect %><br/>
+	<%= hole.inspect %> | 
+	<%= hole.get_swings %><br/>
 <% end %>
 </div>
