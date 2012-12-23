@@ -185,6 +185,8 @@ a {
 	font-size:11px;
 } 
 
+
+
 .content ul li {
     overflow: hidden;
     clear: both;
@@ -1042,4 +1044,34 @@ div.itemValue {
 -webkit-transform-style: flat;
 -webkit-backface-visibility: hidden;
 -webkit-perspective: 800;
+}
+
+.testbackbutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 20px;
+    background: green;
+    color:#F30;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+    height: 40px;
+    border: 1px solid green;
+    margin-top: 10px;
+	margin-left:10px;
+}
+
+.testaddbutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 15px;
+    background: red;
+    color:#F30;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+	float: left;
+	position: absolute; 
+    height: 40px;
+    border: 1px solid red;
+    margin-top: 10px;
+	right: 10px;
 }
