@@ -104,7 +104,6 @@ class HoleController < Rho::RhoController
     @distance = @@hole.distance
     @heading = @@hole.heading
     set_vars
-    render :action => :submit
   end 
   
   def set_vars
