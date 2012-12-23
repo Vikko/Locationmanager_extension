@@ -103,22 +103,10 @@ a {
 	color:#039 !important;
 }
 
+/* Standaard formats */ 
 .center {
 	text-align:center;
 	margin: 0 auto;
-}
-
-#selectbutton{
-	width:100%;
-	background-color:#C96;
-}
-
-#inputdistance {
-	vertical-align:middle;
-}
-
-#distance_input {
-	margin: 10px 0;
 }
 
 .STransparent {
@@ -131,11 +119,36 @@ a {
 	color:#000; 
 	text-shadow:#00F;
 }
+
+#selectbutton{
+	width:100%;
+	background-color:#C96;
+}
+
+/* Distance DISTANCE */ 
+
+#inputdistance {
+	vertical-align:middle;
+}
+
+#distance_input {
+	margin: 10px 0;
+}
+
 #compass{
 	position:absolute;
 	top:60px;
 	left:20px;
 }
+
+/* Feedback google FEEDBACK GOOGLE */ 
+
+#information{
+	
+	
+}
+
+/* Scorecard SCORECARD */ 
 
 .scorecard{
 	border-style:solid;
@@ -157,6 +170,8 @@ a {
 	border-color:#666 !important;
 }
 
+/* History HISTORY */ 
+
 .history{
 	width:330px;
 	border-style:solid;
@@ -168,7 +183,7 @@ a {
 .history tr{
 	background-color:#FFF;
 	font-size:11px;
-}
+} 
 
 .content ul li {
     overflow: hidden;
@@ -991,10 +1006,10 @@ div.itemValue {
 }
 
 .ui-content {
-    min-height: 480px;
-    background-image: url(../images/backgrounds/home_bg_1.png);
-	background-position:center; 
-    /*background-color: black; */
+/*  min-height: 480px;*/
+    background-image: url(../images/backgrounds/Default_bg_iphone5.png);
+	background-position:left top; 
+/*  background-color: black; */
 }
 
 .ui-header .ui-title {

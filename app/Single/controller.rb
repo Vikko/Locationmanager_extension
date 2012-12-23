@@ -45,4 +45,9 @@ class SingleController < Rho::RhoController
       calculate
     end
   end
+  
+  def show_map
+    set_vars
+    render :action => "information_googlemaps"
+  end
 end

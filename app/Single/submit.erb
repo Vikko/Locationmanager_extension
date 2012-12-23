@@ -4,10 +4,13 @@
   <div data-role="header" data-position="inline">
     <h1>Single distance</h1>
   </div>
-  <div data-role="content">
+<!-- <div data-role="content"> -->
     <div id="information">
       <%= render :partial => "information" %>
     </div> 
     <a href="#" id="update_distance">Update heading and distance</a>
-  </div>
+<a class="standardbutton" href="<%= url_for :action => 'show_map'%>" id="update_distance">View Map</a>
+ 
+    
+<!--  </div> -->
 </div>
