@@ -16,7 +16,6 @@ class LocationController < Rho::RhoController
     x, y, z, th = data
     result = '{"heading": ' + th.to_s + '}'
     render :string => result, :use_layout_on_ajax => true
-    
   end
   
 end

@@ -10,7 +10,7 @@ $(document).ready(function(){
 	})
 	$("#course_update_distance").click(function(e){
 		$.ajax({
-			url: "update_heading_distance",
+			url: "/app/Hole/update_heading_distance",
 			type: "GET",
 			success: function(data){
 				$("#information").html(data)
@@ -28,7 +28,7 @@ $(document).ready(function(){
 	});
 	$("#course_add_swing").click(function(e){
 		$.ajax({
-			url: "add_swing",
+			url: "/app/Hole/add_swing",
 			type: "GET",
 			success: function(data){
 				$("#swings").html(data)

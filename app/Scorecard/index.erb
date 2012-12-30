@@ -14,69 +14,22 @@
               <td>Par</td>
               <td>Player 1 Hits</td>
           </tr>
+					<% @holes.each do |hole| %>
           <tr>
-              <td>1</td>
-              <td>unknown</td>
-              <td>get from DB</td>
-              <td>unknown</td>
-              <td>get from DB</td>
+              <td><%= hole.hole_nr %></td>
+              <td> - </td>
+              <td><%= hole.distance %></td>
+              <td><%= hole.par %></td>
+              <td><%= hole.swing_count %></td>
           </tr>
-          <tr ID="activerowscorecard">
+					<% end %>
+          <!-- <tr ID="activerowscorecard">
               <td>2</td>
               <td>unknown</td>
               <td>get from DB</td>
               <td>unknown</td>
               <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>3</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>4</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>5</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>6</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>7</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>8</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
-          <tr>
-                <td>9</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-                <td>unknown</td>
-                <td>get from DB</td>
-          </tr>
+          </tr> -->
      </table>
      </div>
      <div>
