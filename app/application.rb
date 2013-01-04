@@ -1,6 +1,6 @@
 require 'rho/rhoapplication'
 require 'rho/rhotabbar'
-# require 'locationmanager'
+# require 'locationmanager' 
 
 class AppApplication < Rho::RhoApplication
   def initialize

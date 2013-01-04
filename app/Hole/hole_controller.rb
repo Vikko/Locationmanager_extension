@@ -138,7 +138,6 @@ class HoleController < Rho::RhoController
   def finish_hole
     @@hole.add_swing
     WebView.navigate(url_for(:action => :new))
-    render :nothing => true
   end
   
   def update_heading_distance

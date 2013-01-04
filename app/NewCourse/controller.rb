@@ -23,7 +23,6 @@ class NewCourseController < Rho::RhoController
     Course.delete_all
     Hole.delete_all
     Swing.delete_all
-    render :nothing => true
   end
   
 end
