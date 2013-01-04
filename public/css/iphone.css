@@ -1046,32 +1046,134 @@ div.itemValue {
 -webkit-perspective: 800;
 }
 
-.testbackbutton {
+.viewmapbutton {
     -webkit-appearance: none;
-    -webkit-border-radius: 20px;
-    background: green;
-    color:#F30;
-    font-size: 20px;
-    font-weight: bold;
-    width: 30%;
-    height: 40px;
-    border: 1px solid green;
-    margin-top: 10px;
-	margin-left:10px;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 90px;
+    height: 100px;
+    border: 2px solid blue;
+	position:absolute;
+    top: 60px;
+	right: 10px;
+}
+.viewcontrolbutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 90px;
+    height: 100px;
+    border: 2px solid blue;
+	position:absolute;
+    top: 60px;
+	right: 10px;
 }
 
-.testaddbutton {
+.previousholebutton {
     -webkit-appearance: none;
-    -webkit-border-radius: 15px;
-    background: red;
-    color:#F30;
-    font-size: 20px;
-    font-weight: bold;
-    width: 30%;
-	float: left;
-	position: absolute; 
-    height: 40px;
-    border: 1px solid red;
-    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    background: black;
+    color: orange;
+    font-weight: normal;
+    width: 70px;
+    height: 100px;
+    border: 2px solid red;
+	position: absolute;
+    bottom: 60px;
+	left: 10px;
+	padding-left: 20px;
+	display: table; 
+}
+.previousholebutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+}
+.addswingbutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 180px;
+    height: 50px;
+    border: 2px solid green;
+	position:absolute;
+	bottom: 160px;
+	left: 110px;
+}
+
+.updatebutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 180px;
+    height: 80px;
+    border: 2px solid blue;
+	position:absolute;
+	bottom: 70px;
+	left: 110px;
+}
+.undoswingbutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 180px;
+    height: 50px;
+    border: 2px solid red;
+	position:absolute;
+	bottom: 10px;
+	left: 110px;
+}
+.startnextholebutton {
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    background: black;
+    color:#333;
+    font-size:14px;
+    font-weight: normal;
+    width: 90px;
+    height: 100px;
+    border: 2px solid green;
+	position:absolute;
+    bottom: 60px;
 	right: 10px;
+	display: table; 
+}
+.startnextholebutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+}
+
+.arrow-left {
+	position:inherit;
+	width: 0; 
+	height: 0; 
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent; 
+	border-right:15px solid red; 
+	margin-left: -20px;
+}
+.arrow-right {
+	position:inherit;
+	width: 0; 
+	height: 0; 
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent; 
+	border-left: 15px solid green; 
+	margin-left: 70px;
 }
