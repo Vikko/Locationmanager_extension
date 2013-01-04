@@ -16,13 +16,16 @@ class Hole
   
   EARTHRADIUS = 6368500.0
   PI = 3.141592653589793
-  
+    
   def valid?
     return (self.start_lat != nil && self.start_long != nil && self.heading != nil && self.distance != nil)
   end
   
   def get_swings
-    Swing.find(:all, :conditions => ["hole_id = ?", self.object])
+    swings = Swing.find(:all, :conditions => ["hole_id = ?", self.object])
+    self.swing_count = swings.size
+    self.save
+    return swings
   end
   
   def add_swing

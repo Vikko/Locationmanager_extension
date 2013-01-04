@@ -16,7 +16,7 @@ class HoleController < Rho::RhoController
     if @hole
       render :action => :show, :back => url_for(:action => :index)
     else
-      redirect :action => :index
+      WebView.navigate( url_for(:action => :index))
     end
   end
 
@@ -25,9 +25,9 @@ class HoleController < Rho::RhoController
     @@course ||= Course.find(@params["course"])
     @course = @@course
     hole_nr = @params["hole_nr"] ? @params["hole_nr"].to_i : (@course.get_holes.size + 1)
-    @hole = Hole.new(:hole_nr => (hole_nr))
+    @hole = Hole.new(:hole_nr => hole_nr)
     if @course.holes_count != nil && hole_nr > @course.holes_count.to_i
-      redirect "/app/Scorecard"
+      WebView.navigate(url_for(:controller => :Scorecard, :action => :index, :query => {:course => @@course.object}))
     else
       render :action => :new, :back => '/app'
     end
@@ -39,14 +39,14 @@ class HoleController < Rho::RhoController
     if @hole
       render :action => :edit, :back => url_for(:action => :index)
     else
-      redirect :action => :index
+      WebView.navigate( url_for(:action => :index))
     end
   end
 
   # POST /Hole/create
   def create
     @hole = Hole.create(@params['hole'])
-    redirect :action => :index
+    WebView.navigate( url_for(:action => :index))
   end
   
   def create_hole
@@ -70,21 +70,21 @@ class HoleController < Rho::RhoController
      if @@hole.valid? 
        calculate
      end
-     redirect :action => :swing_input
+     WebView.navigate( url_for(:action => :swing_input))
    end
   
   # POST /Hole/{1}/update
   def update
     @hole = Hole.find(@params['id'])
     @hole.update(@params['hole']) if @hole
-    redirect :action => :index
+    WebView.navigate( url_for(:action => :index))
   end
 
   # POST /Hole/{1}/delete
   def delete
     @hole = Hole.find(@params['id'])
     @hole.destroy if @hole
-    redirect :action => :index  
+    WebView.navigate( url_for(:action => :index))
   end
   
   def get_location
@@ -104,7 +104,14 @@ class HoleController < Rho::RhoController
     @distance = @@hole.distance
     @heading = @@hole.heading
     set_vars
-  end 
+  end
+  
+  def information_googlemaps
+    get_location
+    set_vars
+    @hole = @@hole
+    render :back => '/app'
+  end
   
   def set_vars
     @lat = @@lat
@@ -113,6 +120,9 @@ class HoleController < Rho::RhoController
   end  
   
   def swing_input
+    if @@hole == nil
+      WebView.navigate( url_for(:action => :new))
+    end
     calculate
     @course = @@course
     render :action => :swing_input    
@@ -120,8 +130,15 @@ class HoleController < Rho::RhoController
   
   def add_swing
     @@hole.add_swing
+    @hole = @@hole
     @swings = @@hole.get_swings
     render :partial => "swings"
+  end
+  
+  def finish_hole
+    @@hole.add_swing
+    WebView.navigate(url_for(:action => :new))
+    render :nothing => true
   end
   
   def update_heading_distance

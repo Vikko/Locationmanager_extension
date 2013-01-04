@@ -9,7 +9,7 @@ class AppApplication < Rho::RhoApplication
     # @tabs = nil
     
     # Locationmanager::Base::init
-    #To remove default toolbar uncomment next line:
+    # To remove default toolbar uncomment next line:
     @tabs = nil
           # [
           # {:action => 'app/Single', :colored_icon => true, :icon => 'public/images/icons/single.png'},
@@ -19,9 +19,9 @@ class AppApplication < Rho::RhoApplication
     Rho::NativeTabbar.create({
           :place_tabs_bottom => true,
           :tabs => [
-            { :label => "Single", :action => '/app/Single', 
+            { :label => "New Course", :action => '/app/NewCourse?reset=1', 
               :icon => "/public/images/icons/single_v2.png", :reload => true, :colored_icon => true }, 
-            { :label => "New Course",  :action => '/app/NewCourse',  
+            { :label => "Current Course",  :action => '/app/NewCourse',  
               :icon => "/public/images/icons/distance_v2.png", :reload => true, :colored_icon => true },
             { :label => "History",  :action => '/app/History',  
               :icon => "/public/images/icons/score_card_v3.png", :reload => true, :colored_icon => true },
@@ -31,6 +31,8 @@ class AppApplication < Rho::RhoApplication
               :icon => "/public/images/icons/settings_v2.png", :reload => true, :colored_icon => true }
           ]
         })
+        
+    $session ||= {}
           
     @@toolbar = nil
     super
