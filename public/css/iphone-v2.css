@@ -223,7 +223,7 @@ h1 {
 }
 
 /* toolbar */
-
+/*
 .toolbar {
     width: 100%;
     height: 50px;
@@ -301,7 +301,9 @@ h1 {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #6f96e9), color-stop(0.5, #3366cc), color-stop(1.0, #3366cc));
     border: #1a49b3 1px solid;
 }
+*/
 
+/*
 .content {
     background: url('/public/images/pinstripes.png');
     min-height: 480px;
@@ -334,8 +336,10 @@ h1 {
     line-height: 40px;
 }
 
+*/
 /*  text styles  */
 
+/*
 .darkBlue {
     color: #7287A4;
 }
@@ -346,8 +350,11 @@ h1 {
     color: #565E70;
 }
 
-/* lists */
+*/
 
+
+/* lists */
+/*
 .content ul {
     border-top: 1px solid #848284;
     background-color: white;
@@ -418,9 +425,10 @@ h1 {
     height: 100%;
     max-width: 100px;
 }
+*/
 
 /* Forms */
-
+/*
 .content form {
     padding: 5px 0 75px 0;
     border: none;
@@ -535,8 +543,10 @@ h1 {
     line-height: 20px;
 }
 
-/* Settings */
+*/
 
+/* Settings */
+/*
 .content ul.settings {
     padding: 0;
     margin: 0;
@@ -577,11 +587,12 @@ h1 {
     margin: 0 8px;
     color: #565E70;
 }
-
+*/
 
 
 /* Override some styles provided by iphone.css to make them match the real iPhone more closely. */
 
+/*
 .toolbar {
 	background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(176,188,205)), color-stop(0.5, rgb(136,155,179)), color-stop(0.51, rgb(129,149,175)), color-stop(1, rgb(109,132,162)));
 	border-top: 1px solid #CDD5Df;
@@ -594,11 +605,13 @@ h1 {
 
 .pageTitle h1 {
 	text-shadow: rgba(0,0,0,0.6) 0px -1px 0;
-	width: 50%;  /* Should match pageTitle's width. */
+	width: 50%;  
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space:nowrap;
 }
+*/
+
 
 /* --- Controls the switcher buttons, trying to emulate the native switcher control. --- */
 
@@ -613,6 +626,7 @@ h1 {
   */
 
 /* Use on the div containing your button options. */
+/*
 .switcher {
 	text-align:center;
 	position:relative;
@@ -622,19 +636,23 @@ h1 {
 	padding-top:10px;
 	height:30px;
 }
+*/
 
 /* All button divs must contain an <a> tag with the button's label in it. */
+/*
 .switcher a {
 	color:#fff;
 	text-shadow: rgba(0,0,0,0.5) 0px -1px 0;
 	font-weight:bold;
 	font-size:smaller;
 }
+*/
 
 /* Include the .ls-button style on each button div. */
+/*
 .switcher .ls-button {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(171,185,202)), color-stop(0.5, rgb(130,151,175)), color-stop(0.51, rgb(118,139,167)), color-stop(1, rgb(120,141,169)));
-    width:80px;  /* NOTE: If you only want to use 2 buttons, increase width to something more like 125px, and change margin to 0 -3px. */
+    width:80px;  /* NOTE: If you only want to use 2 buttons, increase width to something more like 125px, and change margin to 0 -3px. *//*
     height:15px;
     display:inline-block;
     padding-bottom:8px;
@@ -642,8 +660,10 @@ h1 {
     border:1px solid #000;
     text-align:center;
 }
+*/
 
 /* Indicates the currently active (pressed) button. */
+/*
 .switcher .ls-pressed {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(142,164,193)), color-stop(0.5, rgb(88,119,162)), color-stop(0.51, rgb(71,105,153)), color-stop(1, rgb(74,108,152)));
 }
@@ -662,16 +682,19 @@ h1 {
     -webkit-border-top-right-radius: 4px;
     -webkit-border-bottom-right-radius: 4px;
 }
+*/
 
 /* If an option should not be available, you can use the .ls-disabled class to gray it out. */
-.switcher .ls-disabled {
+/*.switcher .ls-disabled {
     background:-webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(158,158,158)), color-stop(0.95, rgb(204,204,204)))
 }
+*/
 
 /* However, even with disabled classes you must still include an <a> tag. Just have it go href="#" */
-.switcher .ls-disabled a {
+/*.switcher .ls-disabled a {
     color:#f0f0f0;
 }
+*/
 
 /* ---------- JQM theme customization ------------- */
 .ui-bar-a {
@@ -680,9 +703,10 @@ h1 {
     color: white;
     text-shadow: 1px 1px 1px #000;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb), color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
-/*
+
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#bbb));
-*/
+
+
 }
 .ui-bar-a,
 .ui-bar-a input,
@@ -716,7 +740,7 @@ h1 {
     border-bottom: #34404e 1px solid;
     padding: 0 2px 0 2px;
 */
-
+/*
 
 	border: 1px solid 		#222;
 	background: 			#333333;
@@ -727,6 +751,7 @@ h1 {
 /*
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
 */
+/*
 }
 .ui-btn-up-a a.ui-link-inherit {
 	color: 					#fff;
@@ -943,8 +968,10 @@ h1 {
 	border-radius: 						7px;
 }
 
-/* ---------- Custom fixes ------------- */
+/*
 
+/* ---------- Custom fixes ------------- */
+/*
 .ui-btn-left[data-rel="back"] .ui-btn-inner,
 .ui-btn-left[data-icon="back"] .ui-btn-inner,
 .ui-btn-left[data-icon="arrow-l"] .ui-btn-inner {
@@ -960,6 +987,7 @@ h1 {
     -webkit-border-bottom-left-radius: 200px 50px;
     -webkit-border-top-left-radius: 200px 50px;
 */
+/*
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -997,7 +1025,7 @@ a.ui-btn-left[data-icon="home"] {
     display: none;
 }
 */
-
+/*
 div.itemLabel {
     font-weight: bold;
     font-size: 16px;
@@ -1006,7 +1034,7 @@ div.itemValue {
     font-weight: normal;
     font-size: 16px;
 }
-
+*/
 .ui-content {
 /*  min-height: 480px;*/
     background-image: url(../images/backgrounds/Default_bg_iphone5.png);
@@ -1046,144 +1074,32 @@ div.itemValue {
 -webkit-perspective: 800;
 }
 
-.viewmapbutton {
+.testbackbutton {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 90px;
-    height: 100px;
-    border: 2px solid blue;
-	position:absolute;
-    top: 60px;
-	right: 10px;
-}
-.viewcontrolbutton {
-    -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 90px;
-    height: 100px;
-    border: 2px solid blue;
-	position:absolute;
-    top: 60px;
-	right: 10px;
-}
-
-.previousholebutton {
-    -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color: orange;
-    font-weight: normal;
-    width: 26%;
-    height: 100px;
-    border: 2px solid red;
-	position: absolute;
-    bottom: 17%;
-	left: 2%;
-	padding-left: 20px;
-	display: table; 
-}
-.previousholebutton P{
-	display: table-cell;
-	height:inherit;
-	vertical-align:middle;
-}
-.addswingbutton {
-    -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 40%;
+    background: green;
+    color:#F00;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
     height: 50px;
-    border: 2px solid green;
-	position:absolute;
-	bottom: 37%;
-	left: 30%;
+    border: 5px solid green;
+    margin-top: 10px;
+	margin-left:10px;
 }
 
-.updatebutton {
+.testaddbutton {
     -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 40%;
-    height: 15%;
-    border: 2px solid blue;
-	position:absolute;
-	bottom: 20%;
-	left: 30%;
-}
-
-#updatebutton {
-      background: url("/public/images/icons/Update-100px.png") no-repeat top left;
-	  margin:-10px;
-	  padding:0px;
-	  position:inherit;
-	  overflow:visible;
-	  height:100%;
-	  width:100%;
-   }
-.undoswingbutton {
-    -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 40%;
-    height: 10%;
-    border: 2px solid red;
-	position:absolute;
-	bottom: 8%;
-	left: 30%;
-}
-.startnextholebutton {
-    -webkit-appearance: none;
-    -webkit-border-radius: 5px;
-    background: black;
-    color:#333;
-    font-size:14px;
-    font-weight: normal;
-    width: 26%;
-    height: 100px;
-    border: 2px solid green;
-	position:absolute;
-    bottom: 17%;
-	left: 72%;
-	display: table; 
-}
-.startnextholebutton P{
-	display: table-cell;
-	height:inherit;
-	vertical-align:middle;
-}
-
-.arrow-left {
-	position:inherit;
-	width: 0; 
-	height: 0; 
-	border-top: 50px solid transparent;
-	border-bottom: 50px solid transparent; 
-	border-right:15px solid red; 
-	margin-left: -20px;
-}
-.arrow-right {
-	position:inherit;
-	width: 0; 
-	height: 0; 
-	border-top: 50px solid transparent;
-	border-bottom: 50px solid transparent; 
-	border-left:15px solid green; 
-	margin-left: 80%;
+    -webkit-border-radius: 15px;
+    background: red;
+    color:#F30;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+	float: left;
+	position: absolute; 
+    height: 40px;
+    border: 1px solid red;
+    margin-top: 10px;
+	right: 10px;
 }
