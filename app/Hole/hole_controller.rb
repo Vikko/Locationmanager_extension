@@ -117,7 +117,6 @@ class HoleController < Rho::RhoController
     get_location
     set_vars
     @hole = @@hole
-    render :back => '/app'
   end
   
   def set_vars
