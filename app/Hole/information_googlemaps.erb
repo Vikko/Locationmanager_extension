@@ -4,7 +4,7 @@
     <h1>Map View</h1>
   </div>
   <div data-role="content">
-	<a href="<%= url_for (:action => :swing_input) %>"><div class="viewmapbutton">Back</div></a>
+	<a href="/app/Hole/swing_input"><div class="viewmapbutton">Back</div></a>
     <img src="http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&size=320x535&format=png32&markers=color:blue%7Csize:mid%7Clabel:You%7C<%= @lat %>,<%= @long %>&markers=color:red%7Clabel:Goal%7C<%= @hole.goal_lat %>,<%= @hole.goal_long %>&sensor=true">
   </div>
 </div>
