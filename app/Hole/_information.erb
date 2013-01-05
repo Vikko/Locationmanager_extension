@@ -3,19 +3,5 @@
   Distance: <%= @distance %>
 </p>
 <ul class="homemenu">
-      <li><a href="<%= url_for :action => :information_googlemaps %>">Maps view</a></li>
+      <li></li>
     </ul> 
-<a href="#" id="update_heading_distance">Update heading and distance</a>
-<script type="text/javascript">
-$(document).ready(function(){
-	$("#update_heading_distance").click(function(e){
-		$.ajax({
-			url: "<%= url_for :action => :update_heading_distance %>",
-			type: "GET",
-			success: function(data){
-				$("#information").html(data)
-			}
-		})
-	})	
-});
-</script>

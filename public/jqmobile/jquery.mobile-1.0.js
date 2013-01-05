@@ -1736,7 +1736,7 @@ $.widget( "mobile.page", $.mobile.widget, {
 		activeBtnClass: "ui-btn-active",
 
 		// Automatically handle clicks and form submissions through Ajax, when same-domain
-		ajaxEnabled: true,
+		ajaxEnabled: false,
 
 		// Automatically load and show pages based on location.hash
 		hashListeningEnabled: true,

@@ -40,6 +40,14 @@ class Hole
     Swing.create(:lat_start => lat_start, :long_start => long_start, :lat_end => lat_end, :long_end => long_end, :hole_id => self.object)
   end
   
+  def undo_swing
+    unless (get_swings == [])
+      last = get_swings.last
+      last.destroy
+    end
+    get_swings
+  end
+  
   def get_course
     Course.find(self.course_id)
   end

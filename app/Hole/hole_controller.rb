@@ -135,6 +135,13 @@ class HoleController < Rho::RhoController
     render :partial => "swings"
   end
   
+  def undo_swing
+    @@hole.undo_swing
+    @hole = @@hole
+    @swings = @@hole.get_swings
+    render :partial => "swings"
+  end
+  
   def finish_hole
     @@hole.add_swing
     WebView.navigate(url_for(:action => :new))
