@@ -1060,6 +1060,17 @@ div.itemValue {
     top: 60px;
 	right: 10px;
 }
+
+#viewmapbutton {
+      background: url("/public/images/icons/golfbaan-200px.png") no-repeat top left;
+	  position:inherit;
+	  overflow:visible;
+	  height:100%;
+	  width:100%;
+	  padding-left:50%;
+	  background-size:contain;
+}
+
 .viewcontrolbutton {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
@@ -1109,6 +1120,12 @@ div.itemValue {
 	bottom: 37%;
 	left: 30%;
 }
+#add {
+	font-size:36px;
+	color:green;
+	position:inherit;
+	padding-left: 10px;
+}
 
 .updatebutton {
     -webkit-appearance: none;
@@ -1122,17 +1139,13 @@ div.itemValue {
 	bottom: 20%;
 	left: 30%;
 }
-.updatebutton P{
-
-}
 
 #updatebutton {
       background: url("/public/images/icons/Update-200px.png") no-repeat top left;
-
 	  position:inherit;
 	  overflow:visible;
-	  height:50%;
-	  width:50%;
+	  height:100%;
+	  width:100%;
 	  padding-left:50%;
 	  background-size:contain;
 }
@@ -1151,6 +1164,14 @@ div.itemValue {
 	bottom: 8%;
 	left: 30%;
 }
+
+#substract {
+	font-size:36px;
+	color:red;
+	position:inherit;
+	padding-left: 10px;
+}
+
 .startnextholebutton {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
