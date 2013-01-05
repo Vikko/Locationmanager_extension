@@ -1050,24 +1050,33 @@ div.itemValue {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     font-size:14px;
     font-weight: normal;
-    width: 90px;
+    width: 100px;
     height: 100px;
     border: 2px solid blue;
 	position:absolute;
     top: 60px;
 	right: 10px;
+	display:table;
+}
+
+.viewmapbutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+	text-align:right;
+	padding-right: 10px;
+	padding-left: 40%;
 }
 
 #viewmapbutton {
       background: url("/public/images/icons/golfbaan-200px.png") no-repeat top left;
 	  position:inherit;
 	  overflow:visible;
-	  height:100%;
-	  width:100%;
-	  padding-left:50%;
+	  height:80%;
+	  width:80%;
 	  background-size:contain;
 }
 
@@ -1075,23 +1084,42 @@ div.itemValue {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     font-size:14px;
     font-weight: normal;
-    width: 90px;
+    width: 100px;
     height: 100px;
     border: 2px solid blue;
 	position:absolute;
     top: 60px;
 	right: 10px;
+	vertical-align:middle;
+	display:table;
+}
+
+.viewcontrolbutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+	text-align:right;
+	padding-right: 10px;
+	padding-left: 40%;
+}
+
+#viewcontrolbutton {
+      background: url("/public/images/icons/controls-100px.png") no-repeat top left;
+	  position:inherit;
+	  overflow:visible;
+	  height:50%;
+	  width:50%;
+	  background-size:contain;
 }
 
 .previousholebutton {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color: orange;
-    font-weight: normal;
+	color: white;
     width: 26%;
     height: 100px;
     border: 2px solid red;
@@ -1103,23 +1131,33 @@ div.itemValue {
 }
 .previousholebutton P{
 	display: table-cell;
-	height:inherit;
+	height: inherit;
 	vertical-align:middle;
 }
+
 .addswingbutton {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     font-size:14px;
-    font-weight: normal;
     width: 40%;
     height: 50px;
     border: 2px solid green;
 	position:absolute;
 	bottom: 37%;
 	left: 30%;
+	display:table;
 }
+
+.addswingbutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+	text-align:right;
+	padding-right: 10px;
+}
+
 #add {
 	font-size:36px;
 	color:green;
@@ -1131,13 +1169,22 @@ div.itemValue {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     width: 40%;
-    height: 15%;
+    height: 75px;
     border: 2px solid blue;
 	position:absolute;
 	bottom: 20%;
 	left: 30%;
+	display:table;
+}
+
+.updatebutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+	text-align:right;
+	padding-right: 10px;
 }
 
 #updatebutton {
@@ -1154,15 +1201,24 @@ div.itemValue {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     font-size:14px;
     font-weight: normal;
     width: 40%;
-    height: 10%;
+    height: 50px;
     border: 2px solid red;
 	position:absolute;
 	bottom: 8%;
 	left: 30%;
+	display:table;
+}
+
+.undoswingbutton P{
+	display: table-cell;
+	height:inherit;
+	vertical-align:middle;
+	text-align:right;
+	padding-right: 10px;
 }
 
 #substract {
@@ -1176,7 +1232,7 @@ div.itemValue {
     -webkit-appearance: none;
     -webkit-border-radius: 5px;
     background: black;
-    color:#333;
+	color: white;
     font-size:14px;
     font-weight: normal;
     width: 26%;
@@ -1187,10 +1243,13 @@ div.itemValue {
 	left: 72%;
 	display: table; 
 }
+
 .startnextholebutton P{
 	display: table-cell;
 	height:inherit;
 	vertical-align:middle;
+	padding-left: 5px;
+	padding-right: 20px;
 }
 
 .arrow-left {
