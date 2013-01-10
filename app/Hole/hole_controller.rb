@@ -23,7 +23,7 @@ class HoleController < Rho::RhoController
 
   # GET /Hole/new
   def new
-    @@course ||= Course.find(@params["course"])
+    @@course = Course.find($session[:course])
     @course = @@course
     hole_nr = @params["hole_nr"] ? @params["hole_nr"].to_i : (@course.get_holes.size + 1)
     @hole = Hole.new(:hole_nr => hole_nr)
@@ -132,6 +132,7 @@ class HoleController < Rho::RhoController
     end
     calculate
     @course = @@course
+    @swings = @@hole.get_swings
     render :action => :swing_input    
   end
   
