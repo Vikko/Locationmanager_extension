@@ -1,7 +1,20 @@
 <p>    
-  Heading: <%= @heading %> degrees <br/>
+	<img id="green_pointer" src="/public/images/icons/compass.png" height="100" width="100"> 
   Distance: <%= @distance %> Meters
 </p>
 <ul class="homemenu">
       <li></li>
     </ul> 
+<script>
+	$(document).ready(function(){	
+		if (heading_interval == "") {
+	    heading_interval = setInterval(function(){
+	      $.get('/app/Location/get_heading', {}, function(data){
+	      					data.heading = Math.round(data.heading);
+	      	        $('#green_pointer').rotate((360+<%=@heading || 0%>)-(data.heading%360));
+	      	      });
+	      return false;
+	    }, 200);
+  	}
+	});
+</script>
