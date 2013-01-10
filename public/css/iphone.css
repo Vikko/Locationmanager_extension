@@ -141,12 +141,6 @@ a {
 	left:20px;
 }
 
-/* Feedback google FEEDBACK GOOGLE */ 
-
-#information{
-	
-	
-}
 
 /* Scorecard SCORECARD */ 
 
@@ -1044,6 +1038,11 @@ div.itemValue {
 -webkit-transform-style: flat;
 -webkit-backface-visibility: hidden;
 -webkit-perspective: 800;
+}
+
+#information { 
+	font-size:24px;
+	color:#03C;
 }
 
 .viewmapbutton {
