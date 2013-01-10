@@ -12,21 +12,14 @@
 	 	<div id="swings"></div></br>
 
 	   <div>
-					<a href="<%= url_for :action => :information_googlemaps %>"><div class="viewmapbutton">View Map</div></a>
+					<a href="<%= url_for :action => :information_googlemaps %>"><div class="viewmapbutton"><div id="viewmapbutton"></div><p>View map</p></div></a>
 	        <a href="#" id="course_prev_hole"><div class="previousholebutton"><div class="arrow-left"></div><p>Previous Hole</p></div></a>
-	        <a href="#" id="course_add_swing"><div class="addswingbutton">Add Swing</div></a>
-	        <a href="#" id="update_heading_distance"><div class="updatebutton"><div id="updatebutton"><p>Update</p></div></div></a>
-	        <a href="#" id="course_undo_swing"><div class="undoswingbutton">Undo Swing</div></a>
+	        <a href="#" id="course_add_swing"><div class="addswingbutton"><div id="add">+</div><p>Add swing</p></div></a>
+	        <a href="#" id="update_heading_distance"><div class="updatebutton"><div id="updatebutton"></div><p>Update</p></div></a>
+	        <a href="#" id="course_undo_swing"><div class="undoswingbutton"><div id="substract">-</div><p>Undo swing</p></div></a>
 	        <a href="<%= url_for(:action => :finish_hole) %>" id="course_next_hole"><div class="startnextholebutton"><div class="arrow-right"></div><p>Start next Hole</p></div></a>
-
-
-          
 	   </div>
-	   <div class="opmerkingen">
-	   deze gehele tabel wordt uitgelezen uit de database. <br>
-	   alle losse golf clubs met behorende course en datum uit eerste "New Course" uitlezen,<BR> plus optellen van score, plus link maken naar een score kaart van de betreffende baan.<br>
-	   </div> 
-
+	   
 	</div>
 
 </div>
